@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Trivia Escolar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4ff;
+      padding: 20px;
+    }
+    .question {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .option {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .correct {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .incorrect {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+    .hidden {
+      display: none;
+    }
+    #nextBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+    #nextBtn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="animate__animated animate__fadeInDown">Trivia Escolar</h1>
+  <div id="quiz" class="animate__animated animate__fadeIn">
+    <!-- Preguntas aquí -->
+  </div>
+  <button id="nextBtn" disabled>Siguiente</button>
+  <div id="result" class="hidden"></div>
+
+  <script>
+    const questions = [
+      {
+        question: "¿Cuál es la capital de México?",
+        options
